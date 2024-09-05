@@ -1,0 +1,75 @@
+@import "reset";
+
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --font-size-p: 14px;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+
+body,
+.card,
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--grey-900);
+  font-family: "Inter";
+  color: var(--white);
+}
+
+.card {
+  background-color: var(--grey-800);
+  width: min(90vw, 25rem);
+  height: min(95vh, calc(50vh + 10rem));
+  border-radius: 1rem;
+  justify-content: space-around;
+}
+
+.wrapper {
+  height: 85%;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.profile-pic {
+  height: 5rem;
+  aspect-ratio: 1/1;
+  border-radius: 10rem;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.location {
+  color: var(--green);
+}
+
+.bio,
+.btn {
+  font-weight: 600;
+}
+
+.bio {
+  font-weight: 400;
+}
+.socials-container {
+  padding: 0;
+  list-style-type: none;
+}
+.btn {
+  background-color: var(--grey-700);
+}
