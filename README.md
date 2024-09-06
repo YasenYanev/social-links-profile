@@ -26,4 +26,4 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Link](https://www.frontendmentor.io/solutions/social-links-profile-card-built-with-flexbox-EHSxXLYbo-)
-- Live Site URL: [Link](https://github.com/YasenYanev/social-links-profile)
+- Live Site URL: [Link](https://yasenyanev.github.io/social-links-profile/)
