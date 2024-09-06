@@ -6,7 +6,7 @@
   --grey-700: hsl(0, 0%, 20%);
   --grey-800: hsl(0, 0%, 12%);
   --grey-900: hsl(0, 0%, 8%);
-  --font-size-p: 14px;
+  --font-size-p: 0.875rem;
 }
 
 @font-face {
@@ -14,9 +14,11 @@
   src: url("../fonts/Inter-VariableFont_slnt,wght.ttf");
 }
 
+/* Global styles */
 body,
 .card,
-.wrapper {
+.wrapper,
+.socials-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,50 +28,89 @@ body,
 body {
   height: 100vh;
   background-color: var(--grey-900);
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   color: var(--white);
+  margin: 0;
 }
 
+/* Card styling */
 .card {
-  background-color: var(--grey-800);
-  width: min(90vw, 25rem);
-  height: min(95vh, calc(50vh + 10rem));
-  border-radius: 1rem;
   justify-content: space-around;
+  background-color: var(--grey-800);
+  width: min(88vw, 24rem);
+  height: min(70vh, 38.5rem);
+  border-radius: 0.8rem;
 }
 
+/* Wrapper for centering and spacing content */
 .wrapper {
-  height: 85%;
+  height: 90%;
   width: 90%;
-  justify-content: space-between;
+  text-align: center;
 }
 
+.wrapper * {
+  margin: auto;
+}
+
+/* Common margin for elements */
+.profile-pic,
+.name-location-wrapper,
+.bio {
+  margin: 0.85rem auto;
+}
+
+/* Profile image styling */
 .profile-pic {
-  height: 5rem;
-  aspect-ratio: 1/1;
-  border-radius: 10rem;
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+}
+
+/* Text styling */
+p {
+  font-size: var(--font-size-p);
 }
 
 .name {
   font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.location,
+.btn {
+  font-weight: 600;
 }
 
 .location {
   color: var(--green);
 }
 
-.bio,
-.btn {
-  font-weight: 600;
+.bio {
+  font-weight: 300;
 }
 
-.bio {
-  font-weight: 400;
-}
+/* Social buttons container */
 .socials-container {
+  list-style: none;
   padding: 0;
-  list-style-type: none;
+  height: 60%;
+  justify-content: space-between;
+  width: 100%;
 }
+
+/* Button styles */
 .btn {
   background-color: var(--grey-700);
+  width: 100%;
+  height: 2.9rem;
+  border-radius: 0.5rem;
+  line-height: 2.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--green);
+  color: var(--grey-900);
 }
